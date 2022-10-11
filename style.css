@@ -1,0 +1,39 @@
+ body {
+     border: 1px solid black;
+ }
+
+    #navbar {
+        display: flex;
+        height: 3vh;
+        border-bottom: 1px solid black;
+        background-color: #EDEDED;
+    }
+        #title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin: initial;
+        }
+
+        #buttons {
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+        }
+        
+    #css-panel, #js-panel, #output-panel {
+        width: 25vw;
+        height: 95vh;
+        border-right: 1px solid black;
+    }
+
+    #html-container {
+        background-color: green;
+        max-width: 30vw;
+    }
+
+    #html-panel {
+        background-position: top left;
+        width: 25vw;
+        height: 95vh;
+        background-color: orange;
+    }
