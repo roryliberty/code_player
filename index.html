@@ -14,22 +14,25 @@
         <div id="navbar">
             <p>Code Player</p>
             <div id="buttons">
-                <div class="toggle-button active" id="html">HTML</div>
+                <div class="toggle-button active-btn" id="html">HTML</div>
                 <div class="toggle-button" id="css">CSS</div>
                 <div class="toggle-button" id="js">JavaScript</div>
-                <div class="toggle-button active" id="output">Output</div>
+                <div class="toggle-button active-btn" id="output">Output</div>
             </div>
         </div>
 
         <div id="container">
             <!-- Re-sizable html panel -->
-            <textarea class="panel" id="html-panel">Hello World</textarea>
+            <label for="html-panel" class="hidden"></label>
+            <textarea class="panel active-panel" name="html-panel" id="html-panel"><p>Hello World</p></textarea>
 
             <!-- Re-sizable css panel -->
-            <textarea class="panel" id="css-panel"></textarea>
+            <label for="css-panel" class="hidden"></label>
+            <textarea class="panel hidden" name="css-panel" id="css-panel">p { color: green; }</textarea>
 
             <!-- Re-sizable js panel -->
-            <textarea class="panel" id="js-panel"></textarea>
+            <label for="js-panel" class="hidden"></label>
+            <textarea class="panel hidden" name="js-panel" id="js-panel">alert('Hi there!');</textarea>
 
             <!-- Re-sizable output panel -->
             <iframe class="panel" id="output-panel" ></iframe>
