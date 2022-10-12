@@ -1,39 +1,94 @@
- body {
+/* body */
+body {
+     display: flex;
+     flex-direction: column;
      border: 1px solid black;
+     padding: 0;
+     margin: 0;
  }
 
+/* navbar */
     #navbar {
         display: flex;
         height: 3vh;
+        width: 100vw;
         border-bottom: 1px solid black;
         background-color: #EDEDED;
     }
-        #title {
+
+        #navbar p {
             font-weight: bold;
             font-size: 1.5rem;
             margin: initial;
+            padding: 6px;
         }
 
         #buttons {
             display: flex;
             margin: 0 auto;
             align-items: center;
+            background-color: #EDEDED;
         }
-        
-    #css-panel, #js-panel, #output-panel {
-        width: 25vw;
-        height: 95vh;
-        border-right: 1px solid black;
+
+            .toggle-button {
+                border: 1px solid grey;
+                padding: 3px;
+                border-right: none;
+            }
+
+                #html {
+                    border-top-left-radius: 10%;
+                    border-bottom-left-radius: 10%;
+                }
+
+                #output {
+                     border-right: 1px solid grey;
+                     border-top-right-radius: 10%;
+                     border-bottom-right-radius: 10%;
+                 }
+
+            .active {
+                background-color: #EBF3FF;
+            }
+
+            .highlighted-button {
+                background-color: lightgray;
+            }
+
+/* panels */
+
+    #container {
+        display: flex;
     }
 
-    #html-container {
-        background-color: green;
-        max-width: 30vw;
-    }
+        /*#html-container, #css-container, #js-container, #output-container {*/
+        /*    background-color: green;*/
+        /*    height: 93vh;*/
+        /*    width: 33vw;*/
+        /*    !*visibility: hidden;*!*/
+        /*}*/
 
-    #html-panel {
-        background-position: top left;
-        width: 25vw;
-        height: 95vh;
-        background-color: orange;
-    }
+            .panel {
+                float: left;
+                width: 50vw;
+                height: 93vh;
+                /*border-right: 1px solid black;*/
+                background-color: orange;
+                resize: none;
+                border-top: none;
+            }
+
+                #css-panel {
+                    background-color: blue;
+                    display: none;
+                }
+
+                #js-panel {
+                    background-color: red;
+                    display: none;
+                }
+
+                #output-panel {
+                    background-color: bisque;
+                    border: none;
+                }

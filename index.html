@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="style.css">
 
         <title>Code Player</title>
@@ -12,27 +12,31 @@
 
     <body>
         <div id="navbar">
-            <p id="title">Code Player</p>
+            <p>Code Player</p>
             <div id="buttons">
-                <button id="html">HTML</button>
-                <button id="css">CSS</button>
-                <button id="js">JavaScript</button>
-                <button id="output">Output</button>
+                <div class="toggle-button active" id="html">HTML</div>
+                <div class="toggle-button" id="css">CSS</div>
+                <div class="toggle-button" id="js">JavaScript</div>
+                <div class="toggle-button active" id="output">Output</div>
             </div>
         </div>
 
-        <!-- Contains the html panel -->
-        <div id="html-container">
+        <div id="container">
             <!-- Re-sizable html panel -->
-            <div id="html-panel"></div>
+            <textarea class="panel" id="html-panel">Hello World</textarea>
+
+            <!-- Re-sizable css panel -->
+            <textarea class="panel" id="css-panel"></textarea>
+
+            <!-- Re-sizable js panel -->
+            <textarea class="panel" id="js-panel"></textarea>
+
+            <!-- Re-sizable output panel -->
+            <iframe class="panel" id="output-panel" ></iframe>
         </div>
 
-        <div id="css-panel"></div>
-        <div id="js-panel"></div>
-        <div id="output-panel"></div>
-
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
